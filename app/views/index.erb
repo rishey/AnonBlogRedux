@@ -3,8 +3,10 @@
   <p>Get Fudge!</p>
 <h2>Posts:</h2>
     <% @posts.each do |post| %>
-      <ul class="each_post">
-     <li class= "post_title">TITLE: <%= post.title %> </li>
+
+
+     <ul class="each_post">
+     <li class= "post_title">TITLE: <a href="/single_post/<%= post.id %>"><%= post.title %> </a></li>
      <li class= "post_body"> BODY: <%= post.body %> </li>
      <li class= "post_author">AUTHOR: <%= post.author %> </li>
      <li class= "post_tags">TAGS:
@@ -13,6 +15,6 @@
        <% end %>
      </li>
      </ul>
-    <% end %> 
+    <% end %>   
     
 </div>

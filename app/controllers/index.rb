@@ -9,3 +9,9 @@ get '/tag/:tag' do
 	@posts 	= @tag.posts
 	erb :tags
 end
+
+get '/single_post/:post_id' do
+	@post = Post.find(params[:post_id])
+	erb :single_post
+end
+

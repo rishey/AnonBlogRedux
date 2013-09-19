@@ -1,0 +1,14 @@
+<!-- partial for editing Post-->
+<label for="title">Title</label>
+<input id="title" type="text" name="post[title]" placeholder="Title" value="<%= @post.try(:title)%>"><br>
+
+<label for="post_body"><br>Post Body:<br>
+<textarea rows="10" cols="50"  name="post[body]" type="text"><%= @post.try(:body) %></textarea>
+
+<label for="author">Author</label>
+<input id="author" type="author" name="post[author]" placeholder="author name" value="<%= @post.try(:author)%>"><br>
+
+<label for="tags">Tags</label>
+<input id="tags" type="tel" name="post[tags]" placeholder="tags" value="<%=@post.try(:tags)%>"><br>
+
+<input type="Submit">
