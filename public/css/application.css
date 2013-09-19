@@ -7,3 +7,17 @@
 th {
   text-align: left;
 }
+
+.post_title {
+	background-color: gray;
+	color: white;
+}
+
+li {
+	list-style-type: none;
+}
+
+.each_post {
+	border: 2px solid gray;
+	border-radius: 5px;
+}
