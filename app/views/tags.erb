@@ -1,6 +1,6 @@
 <div class="container">
-  <h1>Welcome to Blog!</h1>
-  <p>Get Fudge!</p>
+  <h1>Posts for Tag:<span id="tag_name"> <%= @tag.name.capitalize %></span></h1>
+  <p>Eat shit. J/k. </p>
 <h2>Posts:</h2>
     <% @posts.each do |post| %>
       <ul class="each_post">

@@ -3,3 +3,9 @@ get '/' do
   @posts = Post.all
   erb :index
 end
+
+get '/tag/:tag' do
+	@tag 		= Tag.find_by_name(params[:tag])
+	@posts 	= @tag.posts
+	erb :tags
+end

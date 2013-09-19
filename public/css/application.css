@@ -21,3 +21,17 @@ li {
 	border: 2px solid gray;
 	border-radius: 5px;
 }
+
+.post_tags a {
+	text-decoration: none;
+	color: green;
+}
+
+.post_author a {
+	text-decoration: none;
+	color: purple;
+}
+
+#tag_name {
+	color: red;
+}
