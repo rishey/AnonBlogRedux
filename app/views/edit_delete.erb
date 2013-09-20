@@ -5,16 +5,13 @@
           <label for="title">Title</label>
           <input id="title" type="text" name="post[title]" placeholder="Title" value="<%= @post.title %>"><br>
           <label for="post_body"><br>Post Body:<br>
-          <textarea rows="10" cols="50"  name="post[body]" type="text"> <%= @post.body %> </textarea>
-          <label for="author">Author</label>
+          <textarea rows="10" cols="50"  name="post[body]" type="text"> <%= @post.body %> </textarea><br>
+          <br><label for="author">Author:</label>
           <input id="author" type="author" name="post[author]" placeholder="author name" value="<%= @post.author %>"><br>
-          <input type="Submit">
+          <br><input type="Submit">
         </form>
-        <form action="/delete/<%= @post.id %>" method="POST" id="delete"><br>  
-         <% @post.tags.each do |tag|%>
-          <a href="/tag/<%= tag.name %>"><%= tag.name %></a>
-         <% end %><br>
-         
+        <form action="/delete/<%= @post.id %>" method="POST" id="delete"><br> 
+          
          <input type="Submit" value="DELETE">
          </form>
 </div>
