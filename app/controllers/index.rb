@@ -30,10 +30,7 @@ end
 post '/add' do
 	p = Post.create(params[:post])
 	tags = params[:tag][:name]
-	p "XXXXXXXXXXXXXXXX"
-	p tags
 	tag_array = tags.split(" ")
-	p tag_array.class
 	tag_array.each do |tag|
 		 p.tags.create(name: tag)
 	end
