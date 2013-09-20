@@ -1,0 +1,23 @@
+<div class="container">
+  <h1>Edit/Add Post (for now)</h1>
+  <h4>See, the thing is, you can't REALLY edit it yet.<h4>
+    <form action="/edit" method="POST" id="edit_enter">  
+      <%= erb :_form_fields %>
+    </form>
+
+
+
+
+    <!--   <ul class="each_post">
+     <li class= "post_title">TITLE: <%= @post.title %> </li>
+     <li class= "post_body"> BODY: <%= @post.body %> </li>
+     <li class= "post_author">AUTHOR: <%= @post.author %> </li>
+     <li class= "post_tags">TAGS: -->
+       <% @post.tags.each do |tag|%>
+        <a href="/tag/<%= tag.name %>"><%= tag.name %></a>
+       <% end %>
+     </li>
+     </ul>
+
+    
+</div>
