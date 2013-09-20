@@ -8,6 +8,13 @@
           <textarea rows="10" cols="50"  name="post[body]" type="text"> <%= @post.body %> </textarea><br>
           <br><label for="author">Author:</label>
           <input id="author" type="author" name="post[author]" placeholder="author name" value="<%= @post.author %>"><br>
+
+          <label for="tags">Tags:</label>
+          <input id="tags" type="text" name = "tag[name]" placeholder="Tags separated by spaces" ><br>
+
+
+
+
           <br><input type="Submit">
         </form>
         <form action="/delete/<%= @post.id %>" method="POST" id="delete"><br> 

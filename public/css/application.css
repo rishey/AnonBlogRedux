@@ -1,9 +1,18 @@
+body {
+	  background-image:url("insbackrepeat.gif")
+
+}
+
 .container {
   margin: 20px auto;
   width: 600px;
   padding: 0px 20px 20px 20px;
   border: 1px dotted black;
+  background-color: white;
+  opacity: .95;
+  border-radius: 20px;
 }
+
 th {
   text-align: left;
 }
@@ -25,6 +34,7 @@ li {
 .each_post {
 	border: 2px solid gray;
 	border-radius: 5px;
+
 }
 
 .post_tags a {
@@ -39,4 +49,12 @@ li {
 
 #tag_name {
 	color: red;
+}
+
+.each_post {
+	padding-left: 10px;
+	background-color: red;
+	border-radius: 20px;
+	padding: 10px;
+	opacity: 1;
 }
