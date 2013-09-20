@@ -15,22 +15,31 @@ get '/single_post/:post_id' do
 	erb :single_post
 end
 
-get '/edit_add/:post_id' do
+get '/edit_delete/:post_id' do
 	@post = Post.find(params[:post_id])
-	erb :edit_add
+	erb :edit_delete
+end
+
+get '/add_post' do
+	erb :add_post
 end
 
 
 ############### POSTS ###########
 
-post '/edit' do
-	p " XXXXXXXXXXXXXXXXXXXXXXXXXX PARAMS FOLLOW NEXT XXXXXXXXXXXXXXXXXXXXXXXXXX"
-	p params[:post]
-	p params[:post][:title]
-		p "XXXXXXXXXXXXXXXXXXXXXXXXXX"
+post '/add' do
+	p = Post.new(params[:post])
+	p.save
+	redirect '/'
+end
 
- # Post.where(params[:post]).exists?
-	p Post.find_or_create_by(params[:post])
+post '/edit/:id' do
+	u = Post.find(params[:id])
+	u.update_attributes(params[:post])
+	redirect '/'
+end
 
+post '/delete/:id' do
+	Post.find(params[:id]).destroy
 	redirect '/'
 end

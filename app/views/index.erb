@@ -1,19 +1,21 @@
 <div class="container">
   <h1>Welcome to Blog!</h1>
-  <p>Get Fudge!</p>
+  <a href="/add_post"<h2>Add a New Post</h2></a>
 <h2>Posts:</h2>
     <% @posts.each do |post| %>
-
-
-     <ul class="each_post">
-     <li class= "post_title">TITLE: <a href="/single_post/<%= post.id %>"><%= post.title %> </a></li>
-     <li class= "post_body"> BODY: <%= post.body %> </li>
+      <ul class="each_post">
+     <li class= "post_title">
+      TITLE: <a href="/single_post/<%= post.id %>"><%= post.title %> </a>
+     </li>
+     <li class= "post_body">
+     BODY: <%= post.body %> </li>
      <li class= "post_author">AUTHOR: <%= post.author %> </li>
      <li class= "post_tags">TAGS:
        <% post.tags.each do |tag|%>
         <a href="/tag/<%= tag.name %>"><%= tag.name %></a>
        <% end %>
      </li>
+     <a href="/edit_delete/<%=post.id%>">DELETE/EDIT THIS POST</a>
      </ul>
     <% end %>   
     
